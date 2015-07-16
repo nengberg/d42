@@ -1,0 +1,76 @@
+@font-face {
+	font-family: OratorStd;
+	src: url("../font/OratorStd.otf") format("opentype");
+}
+
+
+body {
+	background-color: #eff4f1;
+	color: #212121;
+	font-weight: normal;
+	font-family: OratorStd, Helvetica, Verdana, Sans-Serif;
+	font-size: 100%;
+	margin: 0;
+}
+
+.site-header {
+	height: 450px;
+	display:block;
+}
+
+.teaser{
+	overflow: hidden;
+	height: 450px;
+}
+
+.teaser img {
+	display:block;
+	height:100%;
+	width:100%;
+}
+
+.nav-wrapper {
+	width: 100%;
+}
+
+.site-header .site-nav {	
+	float:left;
+	position:relative;
+	width: inherit;
+	margin: 0px 0 15px 0;
+	padding: 10px 0 10px 0;
+	background: #fff;
+}
+
+.site-nav ul {
+	clear:left;
+	float:left;
+	left: 50%;
+	position: relative;
+	text-align: center;
+	list-style: none;
+}
+
+.site-nav ul li {
+	float: left;
+	position:relative;
+	right:50%;
+	display: block;
+}
+
+.site-nav a {
+	color: #000;
+	text-decoration: none;
+	font-weight: normal;
+	margin-right:85px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.site-nav ul li a:hover {
+	text-decoration: underline;
+}
+
+#main {
+	display: block;
+}
