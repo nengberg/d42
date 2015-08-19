@@ -4,11 +4,21 @@
 <head>
 	<link href="style/css/master.css" rel="stylesheet">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script>
-		jQuery(document).ready(function() {
-			jQuery('.toggle-nav').click(function(e) {
-        		jQuery('.secondary-items').toggle();
-        		e.preventDefault();
+		$(document).ready(function() {
+			$('.toggle-nav').click(function(e) {
+				$(this).toggleClass( "active" );
+			    // Set the effect type
+			    var effect = 'slide';
+			 
+			    // Set the options for the effect type chosen
+			    var options = { direction: 'right' };
+			 
+			    // Set the duration (default: 400 milliseconds)
+			    var duration = 200;
+			 
+			    $('.secondary-nav').toggle(effect, options, duration);
         	});
 		});
 	</script>
@@ -37,9 +47,11 @@
 					<a href="/hem/"><span>Dessert</span></a>
 				</li>
 			</ul>
-	    	
-    		<ul class="primary-items">
-	    			<li >
+			<button class="toggle-nav" href="#"><span></span></button>
+		</nav>
+		<nav class="site-nav secondary-nav" role="navigation">
+			<ul class="secondary-items">
+	    		<li >
 						<a href="/hem/"><span>Frukost</span></a>
 					</li>
 					<li >
@@ -51,14 +63,6 @@
 					<li>
 						<a href="/hem/"><span>Dessert</span></a>
 					</li>
-			</ul>
-			<button class="toggle-nav" href="#"><span></span></button>
-		</nav>
-		<nav class="site-nav secondary-nav" role="navigation">
-			<ul class="secondary-items">
-	    		<li>
-	    			<a href="/hem/"><span>Övrigt</span></a>
-	    		</li>
 	    	</ul>
 		</nav>
 	</header>

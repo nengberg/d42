@@ -91,6 +91,7 @@ button.toggle-nav span:after {
   position: absolute;
   display: block;
   content: '';
+  transition: all 500ms ease-in-out;
 }
 
 button.toggle-nav span:before {
@@ -101,15 +102,28 @@ button.toggle-nav span:after {
   bottom: -10px; 
 }
 
-.primary-items {
-	display: none;
+button.active span {
+  background-color: transparent;
+}
+
+button.active span:before, button.active span:after {
+  top: 0;
+}
+
+button.active span:before {
+  transform: rotate(45deg);
+}
+
+button.active span:after {
+  transform: rotate(-45deg);
 }
 
 .secondary-nav {
 	float: right;
 	background: #fff;
-	width: 10%;
+	width: 15%;
 	padding: 0;
+	display: none;
 }
 
 @media screen and (min-width: 400px) and (max-width: 750px) {
