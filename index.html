@@ -3,6 +3,15 @@
 <html class="no-js" lang="sv">
 <head>
 	<link href="style/css/master.css" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery('.toggle-nav').click(function(e) {
+        		jQuery('.secondary-items').toggle();
+        		e.preventDefault();
+        	});
+		});
+	</script>
     <meta http-equiv="x-ua-compatible" content="IE=Edge">
 	<meta charset="utf-8" />
     <title>Dinner for two</title>
@@ -13,14 +22,24 @@
 	    <div class="teaser">
 	    	<img src="top-image.jpg" />
 	    </div>
-
-	    <div class="nav-wrapper">
-		    <nav class="site-nav" role="navigation">
-		    	<div class="burger">
-		    		<div class="hamburger-menu"></div>
-		    	</div>
-				<ul>
-					<li >
+	    <nav class="site-nav" role="navigation">
+			<ul class="main-menu">
+				<li>
+					<a class="selected" href="/hem/"><span>Frukost</span></a>
+				</li>
+				<li>
+					<a href="/hem/"><span>Lunch</span></a>
+				</li>
+				<li>
+					<a href="/hem/"><span>Middag</span></a>
+				</li>
+				<li>
+					<a href="/hem/"><span>Dessert</span></a>
+				</li>
+			</ul>
+	    	
+    		<ul class="primary-items">
+	    			<li >
 						<a href="/hem/"><span>Frukost</span></a>
 					</li>
 					<li >
@@ -29,13 +48,19 @@
 					<li >
 						<a href="/hem/"><span>Middag</span></a>
 					</li>
-					<li >
+					<li>
 						<a href="/hem/"><span>Dessert</span></a>
 					</li>
-				</ul>
-			</nav>
-			
-		</div>
+			</ul>
+			<button class="toggle-nav" href="#"><span></span></button>
+		</nav>
+		<nav class="site-nav secondary-nav" role="navigation">
+			<ul class="secondary-items">
+	    		<li>
+	    			<a href="/hem/"><span>Övrigt</span></a>
+	    		</li>
+	    	</ul>
+		</nav>
 	</header>
 
 	<main id="main" role="main">
