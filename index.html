@@ -8,14 +8,9 @@
 	<script>
 		$(document).ready(function() {
 			$('.toggle-nav').click(function(e) {
-				$(this).toggleClass( "active" );
-			    // Set the effect type
+				$(this).toggleClass("active");
 			    var effect = 'slide';
-			 
-			    // Set the options for the effect type chosen
 			    var options = { direction: 'right' };
-			 
-			    // Set the duration (default: 400 milliseconds)
 			    var duration = 200;
 			 
 			    $('.secondary-nav').toggle(effect, options, duration);
@@ -30,12 +25,12 @@
 <body class="start" >
     <header role="banner" class="site-header">
 	    <div class="teaser">
-	    	<img src="top-image.jpg" />
+	    	<img src="img/top-image.jpg" />
 	    </div>
-	    <nav class="site-nav" role="navigation">
-			<ul class="main-menu">
+	    <nav class="primary-nav" role="navigation">
+			<ul class="primary-items">
 				<li>
-					<a class="selected" href="/hem/"><span>Frukost</span></a>
+					<a href="/hem/"><span>Frukost</span></a>
 				</li>
 				<li>
 					<a href="/hem/"><span>Lunch</span></a>
@@ -49,20 +44,26 @@
 			</ul>
 			<button class="toggle-nav" href="#"><span></span></button>
 		</nav>
-		<nav class="site-nav secondary-nav" role="navigation">
+		<nav class="primary-nav secondary-nav" role="navigation">
 			<ul class="secondary-items">
-	    		<li >
-						<a href="/hem/"><span>Frukost</span></a>
-					</li>
-					<li >
-						<a href="/hem/"><span>Lunch</span></a>
-					</li>
-					<li >
-						<a href="/hem/"><span>Middag</span></a>
-					</li>
-					<li>
-						<a href="/hem/"><span>Dessert</span></a>
-					</li>
+				<li class="hidden">
+					<a href="/hem/"><span>Frukost</span></a>
+				</li>
+				<li class="hidden">
+					<a href="/hem/"><span>Lunch</span></a>
+				</li>
+				<li class="hidden">
+					<a href="/hem/"><span>Middag</span></a>
+				</li>
+				<li class="hidden">
+					<a href="/hem/"><span>Dessert</span></a>
+				</li>
+	    		<li>
+					<a href="/hem/"><span>Om sajten</span></a>
+				</li>
+				<li >
+					<a href="/hem/"><span>Kontakt</span></a>
+				</li>
 	    	</ul>
 		</nav>
 	</header>
