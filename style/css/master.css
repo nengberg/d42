@@ -121,6 +121,7 @@ button:focus {
   position: absolute;
   display: block;
   content: '';
+  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -143,10 +144,12 @@ button:focus {
 
 .toggle-nav.active span:before {
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .toggle-nav.active span:after {
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 
 .primary-nav.fixed {
