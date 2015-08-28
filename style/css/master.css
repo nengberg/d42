@@ -9,6 +9,7 @@ body {
 	font-family: OratorStd, Helvetica, Verdana, Sans-Serif;
 	font-size: 100%;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 .site-header {
@@ -22,10 +23,14 @@ body {
     bottom: 0;
 }
 
+.teaser {
+	height: inherit;
+}
+
 .teaser img {
 	display: block;
-	height: 100%;
 	width: 100%;
+	height: inherit;
 }	
 
 #navigation {
@@ -77,6 +82,13 @@ ul li a:hover {
 	padding: 0;
 	display: none;
 	position: relative;
+}
+
+.secondary-nav.fixed {
+	position: fixed;
+    margin-top: 70px;
+    top: 0;
+    right: 0;
 }
 
 .secondary-nav ul {
@@ -137,7 +149,7 @@ button:focus {
   transform: rotate(-45deg);
 }
 
-.fixed {
+.primary-nav.fixed {
 	position: fixed; 
 	top: 0; 
 	height: 50px; 
@@ -148,14 +160,24 @@ button:focus {
 	background-color: #eff4f1;
 }
 
-@media screen and (min-width: 400px) and (max-width: 750px) {
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+
+	.site-header {
+		height: 200px;
+	}
+
+	#navigation {
+		margin-top: 200px;
+	}
 
 	.primary-items {
 		display: none;
 	}
 
 	.secondary-nav {
-		width: 50%;
+		width: 100%;
+		height: 100%;
 	}
 
 	.secondary-nav .secondary-items {
@@ -175,5 +197,9 @@ button:focus {
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-size: 20px;
+	}
+
+	.fixed {
+		display: none;
 	}
 }
