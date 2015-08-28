@@ -137,6 +137,12 @@ button:focus {
   transform: rotate(-45deg);
 }
 
+.fixed {
+	position: fixed; 
+	top: 0; 
+	height: 50px; 
+}
+
 #main {
 	display: block;
 	background-color: #eff4f1;
