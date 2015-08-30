@@ -25,12 +25,17 @@ body {
 
 .teaser {
 	height: inherit;
+	font-family: YeahPapa, Helvetica, Verdana, Sans-Serif;
+	color: #fff;
+	font-size: 50px;
 }
 
-.teaser img {
+.teaser .image {
 	display: block;
-	width: 100%;
-	height: inherit;
+	background-image: url('../../img/image-top.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
 }	
 
 #navigation {
@@ -53,6 +58,11 @@ ul {
 	position: relative;
 	text-align: center;
 	list-style: none;
+}
+
+.primary-items span.selected {
+	padding-bottom: 15px;
+    border-bottom: 3px solid #FFCC00;
 }
 
 ul li {
@@ -160,7 +170,8 @@ button:focus {
 
 #main {
 	display: block;
-	background-color: #eff4f1;
+	background-color: #ffffff;
+	margin-top: 10px;
 }
 
 
