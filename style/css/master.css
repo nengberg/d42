@@ -3,6 +3,11 @@
 	src: url("../font/OratorStd.otf") format("opentype");
 }
 
+@font-face {
+    font-family: NotSoElegant;
+    src: url("../font/notsoelegant.ttf");
+}
+
 body {
 	color: #212121;
 	font-weight: normal;
@@ -25,18 +30,48 @@ body {
 
 .teaser {
 	height: inherit;
-	font-family: YeahPapa, Helvetica, Verdana, Sans-Serif;
+}
+
+.teaser span {
+	font-family: NotSoElegant, Helvetica, Verdana, Sans-Serif;
 	color: #fff;
-	font-size: 50px;
+	font-size: 120px;
+	letter-spacing: 7px;
+	position: fixed;
+	left: 50px;
+	top: 100px;
+}
+
+.teaser span.for {
+	top: 190px;
+	text-align: center;
+}
+
+.teaser span.two {
+	top: 290px;
+	text-align: center;
 }
 
 .teaser .image {
 	display: block;
-	background-image: url('../../img/image-top.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
+	background: url(../../img/top.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	height: 100%;
 }	
+
+.teaser .image:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,100);
+    opacity: 0.1;
+}
 
 #navigation {
 	margin-top: 465px;
@@ -171,7 +206,9 @@ button:focus {
 #main {
 	display: block;
 	background-color: #ffffff;
-	margin-top: 10px;
+	padding-left: 15px;
+	margin-top: 15px;
+	max-width: 1024px;
 }
 
 
@@ -192,6 +229,9 @@ button:focus {
 	.secondary-nav {
 		width: 100%;
 		height: 100%;
+		z-index: 20;
+		position: fixed;
+    	top: 270px;
 	}
 
 	.secondary-nav .secondary-items {
@@ -204,16 +244,19 @@ button:focus {
 
 	ul li {
 		padding-bottom: 20px;
+		float: none;
 	}
 
 	ul li a {
 		font-weight: normal;
-		text-transform: uppercase;
-		letter-spacing: 1px;
 		font-size: 20px;
 	}
 
 	.fixed {
 		display: none;
+	}
+
+	#main {
+		z-index: -3;
 	}
 }
