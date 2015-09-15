@@ -8,13 +8,19 @@
     src: url("../font/notsoelegant.ttf");
 }
 
+@font-face {
+    font-family: Merriweather;
+    src: url("../font/Merriweather.ttf");
+ }
+
 body {
-	color: #212121;
+	color: #565656;
 	font-weight: normal;
 	font-family: OratorStd, Helvetica, Verdana, Sans-Serif;
 	font-size: 100%;
 	margin: 0;
 	overflow-x: hidden;
+	background-color: #FFF3E0;
 }
 
 .site-header {
@@ -205,12 +211,43 @@ button:focus {
 
 #main {
 	display: block;
-	background-color: #ffffff;
-	padding-left: 15px;
-	margin-top: 15px;
-	max-width: 1024px;
+	background-color: #FFF3E0;
 }
 
+article {
+    top: 70px;
+    max-width: 850px;
+    margin: auto;
+    background-color: #FFFFFF;
+    height: 100%;
+    text-align: center;
+}
+
+article .date {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+body p {
+    font-size: 16px;
+    font-family: Merriweather, Helvetica, Verdana, Sans-Serif;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h2 {
+	font-size: 24px;
+	font-family: Merriweather, Helvetica, Verdana, Sans-Serif;
+}
+
+.recipe {
+	text-align: left;
+}
 
 @media screen and (min-width: 320px) and (max-width: 768px){
 
@@ -231,7 +268,7 @@ button:focus {
 		height: 100%;
 		z-index: 20;
 		position: fixed;
-    	top: 270px;
+    	top: 260px;
 	}
 
 	.secondary-nav .secondary-items {
