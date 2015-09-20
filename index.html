@@ -9,12 +9,28 @@
 		$(document).ready(function() {
 			$('.toggle-nav').click(function(e) {
 				$(this).toggleClass("active");
+
+				var widthQuery = window.matchMedia("(max-width: 768px)");
+				if(widthQuery.matches){
+					$('#main').toggleClass("hidden");
+				}
+
 			    var effect = 'slide';
 			    var options = { direction: 'right' };
 			    var duration = 500;
 			 
 			    $('.secondary-nav').toggle(effect, options, duration);
         	});
+
+			$(window).on("resize", function() {  
+			   if($(window).width() <= 768) {
+		         if($('.toggle-nav').hasClass('active')){
+		         	$('#main').addClass("hidden");
+		         }
+			   } else {
+			   	$('#main').removeClass("hidden");
+			   }
+			});
 
         	$(window).scroll(function(){
 			    if ($(window).scrollTop() >= 465) {
