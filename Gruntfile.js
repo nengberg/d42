@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
+
 			dist: {
 				files: {
 					'style/css/master.css' : 'style/sass/master.scss'
