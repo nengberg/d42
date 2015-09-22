@@ -8,12 +8,8 @@
 	<script>
 		$(document).ready(function() {
 			$('.toggle-nav').click(function(e) {
-				$(this).toggleClass("active");
 
-				var widthQuery = window.matchMedia("(max-width: 768px)");
-				if(widthQuery.matches){
-					$('#main').toggleClass("hidden");
-				}
+				$(this).toggleClass("active");
 
 			    var effect = 'slide';
 			    var options = { direction: 'right' };
@@ -22,18 +18,16 @@
 			    $('.secondary-nav').toggle(effect, options, duration);
         	});
 
-			$(window).on("resize", function() {  
-			   if($(window).width() <= 768) {
-		         if($('.toggle-nav').hasClass('active')){
-		         	$('#main').addClass("hidden");
-		         }
-			   } else {
-			   	$('#main').removeClass("hidden");
-			   }
-			});
-
         	$(window).scroll(function(){
-			    if ($(window).scrollTop() >= 465) {
+        		var widthQuery = window.matchMedia("(max-width: 425px)");
+				var fixedWith;
+				if(widthQuery.matches){
+					fixedWith = 350;
+				} else {
+					fixedWith = 465
+				}
+
+			    if ($(window).scrollTop() >= fixedWith) {
 			       $('nav').addClass('fixed');
 			       $('article').addClass('fixed');
 			    }
