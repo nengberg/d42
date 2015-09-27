@@ -36,6 +36,15 @@
 			       $('article').removeClass('fixed');
 			    }
 			});
+
+			$('.icon').click(function(e) {
+
+			    var effect = 'slide';
+			    var options = { direction: 'top' };
+			    var duration = 500;
+			 
+			    $('.ingredient-list').toggle();
+        	});
 		});
 	</script>
 	<meta charset="utf-8" />
@@ -98,6 +107,10 @@
 			<h1>Pasta Bolognese med riven parmesanost</h1>
 			<div class="recipe">
 				<p>Så här lagar du en klassisk förrätt från Bologna. I en riktig Bolognesesås ingår alltid buljong, morot och rotselleri. Det är dessa ingredienser som ger den alldeles speciella smaken till såsen. Servera med spaghetti och riven parmesanost.</p>
+				<div class="ingredient">
+					<button class="icon"><img src="img/ingredient_ic.png"></button>
+					<p class="ingredient-list">Här är ingredienser</p>
+				</div>
 				<h2>Gör så här:</h2>
 				<p>1. Skala och hacka löken. Skala och tärna moroten ytterst fint. Skala rotsellerin och riv den grovt. Fräs grönsakerna mjuka i smöret.</p> 
 				<p>Lägg i färsen och fräs den gyllenbrun. 

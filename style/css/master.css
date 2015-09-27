@@ -201,6 +201,13 @@ body p {
   text-align: left; }
   .recipe p {
     margin: 35px; }
+  .recipe .ingredient button {
+    border: none;
+    background: #FFFFFF; }
+    .recipe .ingredient button img {
+      height: 40px; }
+  .recipe .ingredient .ingredient-list {
+    display: none; }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .site-header {

@@ -275,6 +275,22 @@ body p {
   p {
     margin: 35px;
   }
+
+  .ingredient {
+    button{
+        border: none;
+        background: $white-background;
+
+        img{
+            height: 40px;
+        }
+    }
+
+    .ingredient-list {
+          display: none;
+    }
+  }
+  
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
